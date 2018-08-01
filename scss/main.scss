@@ -1,11 +1,57 @@
 @import 'reset';
 @import 'colors';
+@import 'fontStyles';
 
 body {
-    background-color: red
+    background-color: red;
+    width: 100vw;
 }
 
 .header {
-    width: 100vw;
-    height: 134px;
+    min-width: 100%;
+    height: auto;
+    background-color: $white;
+    display: flex;
+    padding: 10px 15px;
+
+    .logo {
+        width: 40px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .home {
+        margin: auto;
+    }
+
+    h1 {
+        display: inline-block;
+        font-size: 1.6rem;
+        font-family: $mont;
+        color: $blue;
+        font-weight: 600;
+        margin: auto;
+        margin-top: 3px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .menu {
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 35px;
+    }
+}
+
+ul {
+    a{
+        li {
+            display: inline;
+            font-size: 2.4rem;
+            text-transform: uppercase;
+            
+        }
+    }
 }

@@ -13,13 +13,58 @@ ol, ul {
   list-style: none;
 }
 
+button {
+  background: none;
+  cursor: pointer;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
 body {
   background-color: red;
+  width: 100vw;
 }
 
 .header {
-  width: 100vw;
-  height: 134px;
+  min-width: 100%;
+  height: auto;
+  background-color: #fff;
+  display: flex;
+  padding: 10px 15px;
+}
+.header .logo {
+  width: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.header .home {
+  margin: auto;
+}
+.header h1 {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  color: #20b7fa;
+  font-weight: 600;
+  margin: auto;
+  margin-top: 3px;
+}
+.header .nav {
+  display: none;
+}
+.header .menu {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 35px;
+}
+
+ul a li {
+  display: inline;
+  font-size: 2.4rem;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=main.css.map */
