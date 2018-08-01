@@ -55,3 +55,27 @@ ul {
         }
     }
 }
+
+.main {
+    width: 100vw;
+
+    .image-container {
+        width: 100%;
+        height: 65vh;
+        background-image: url('../img/kira-auf-der-heide-475626-unsplash.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .image-container:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(180deg, rgba(32, 183, 250, 0) 0%, $teal 100%);
+        opacity: 0.5;
+    }
+}
