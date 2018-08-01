@@ -78,4 +78,122 @@ ul {
         background-image: linear-gradient(180deg, rgba(32, 183, 250, 0) 0%, $teal 100%);
         opacity: 0.5;
     }
+
+    .contact-form-container {
+        background-color: $white;
+        padding: 15px;
+        font-family: $sans;
+
+        h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            font-weight: 700;
+            font-family: $mont;
+            margin: 20px auto 15px;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            font-size: 1.8rem;
+            font-weight: 600;
+
+            label {
+                margin-bottom: 10px;
+                margin-top: 15px;
+            }
+
+            input {
+                font-family: $sans;
+                font-size: 1.8rem;
+                border: 1px solid #000;
+                border-radius: 5px;
+                padding: 8px;
+            }
+
+            textarea {
+                @extend input;
+                height: 100px;
+            }
+        }
+
+        .submit-button {
+            display: block;
+            margin: 30px auto 20px;
+            background-color: $blue;
+            width: 80%;
+            border-radius: 50px;
+            color: $white;
+            font-weight: 700;
+            font-size: 2rem;
+            padding: 8px;
+            
+        }
+
+    }
+
 }
+
+.subscribe {
+    background-image: linear-gradient(180deg, $blue 0%, $teal 100%);
+    width: 100%;
+    height: auto;
+    
+
+    form {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            font-family: $mont;
+            color: $white;
+            margin: 20px auto 15px;
+        }
+
+        input {
+            background: none;
+            border-bottom: 1px solid $white;
+            font-family: $sans;
+            padding: 5px;
+            padding-left: 30px;
+            font-size: 1.6rem;
+            margin: 10px auto;
+            display: block;
+        }
+
+        .name-input {
+            background-image: url('../img/USER_ICO.svg');
+            background-repeat: no-repeat;
+            background-position: left;
+        }
+
+        .email-input {
+            @extend .name-input;
+            background-image: url('../img/EMIAL_ICO.svg');
+        }
+
+        ::placeholder {
+            font-family: $sans;
+            color:$white;
+        }
+
+        button {
+            font-family: $sans;
+            background-color: $white;
+            border-radius: 50px;
+            width: 50%;
+            color: $blue;
+            font-weight: 700;
+            padding: 10px;
+            margin: 30px auto 20px;
+        }
+
+
+    }
+}
+
+    
