@@ -6,7 +6,9 @@
 
   <title>Zapakujloremipsum.com | Kontakt</title>
 
+  <!-- Favicon -->
   <link rel="icon" href="img/favicon.jpg">
+  <!-- Styles -->
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <!-- Montserrat font -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
@@ -19,14 +21,16 @@
     <header class="header">
         
         <!-- _________LOGO_________ -->
-        <img class="logo" src="img/gift.svg">
+        <a class="home" href="#">
+            <img class="logo" src="img/gift.svg" alt="Logo naszej firmy">
         
-        <a href="#" class="home">
+        <!-- <a href="#" class="home"> -->
             <h1>Zapakujloremipsum.com</h1>
+        <!-- </a> -->
         </a>
 
         <!-- _________NAVIGATION_________ -->
-        <button>
+        <button class="hamburger">
             <img class="menu" src="img/hamburger.svg">
         </button>
         
@@ -34,7 +38,7 @@
             <ul>
                 <a href="#"><li>procesy</li></a>
                 <a href="#"><li>usługi</li></a>
-                <a href="#"><li>kontakt</li></a>
+                <a href="#"><li class="active">kontakt</li></a>
             </ul>
         </nav>
 
@@ -45,22 +49,24 @@
 
         <div class="image-container">  </div>
 
-        <!-- _________FORM_________ -->
+        <!-- _________CONTACT FORM_________ -->
         <div class="contact-form-container">
 
             <form>
 
                 <h2>Napisz do mnie</h2>
 
-                <div class="field">
-                    <label>Email</label>
-                    <input type="email" name="email" placeholder="Podaj email">
-                </div>
+                <div class="info-fields">
+                    <div class="field">
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="Podaj email">
+                    </div>
 
-                <div class="field">
-                    <label>Imię</label>
-                    <input type="text" name="imię" placeholder="Podaj imię">
-                </div>
+                    <div class="field">
+                        <label>Imię</label>
+                        <input type="text" name="imię" placeholder="Podaj imię" class="contact-form-name">
+                    </div>
+                </div>    
 
                 <div class="field">
                     <label>Wiadomość</label>
@@ -82,12 +88,14 @@
 
             <h2>Dodaj swój email do bazy</h2>
 
-            <div class="field">
-                <input class="name-input" type="text" name="Imię" placeholder="Imię">
-            </div>
+            <div class="fields">
+                <div class="field">
+                    <input class="name-input" type="text" name="Imię" placeholder="Imię">
+                </div>
 
-            <div class="field">
-                <input class="email-input" type="email" name="Email" placeholder="E-mail">
+                <div class="field">
+                    <input class="email-input" type="email" name="Email" placeholder="E-mail">
+                </div>
             </div>
 
             <button type="submit">Zapisz mnie</button>
@@ -96,5 +104,6 @@
 
     </section>
 
+    <script src="scripts.js"></script>
 </body>
 </html>

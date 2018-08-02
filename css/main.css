@@ -25,7 +25,7 @@ a {
 
 body {
   background-color: red;
-  width: 100vw;
+  max-width: 100vw;
 }
 
 .header {
@@ -35,40 +35,134 @@ body {
   display: flex;
   padding: 10px 15px;
 }
-.header .logo {
+@media screen and (min-width: 1850px) {
+  .header {
+    padding: 24px 136px 42px 128px;
+  }
+}
+.header .home {
+  margin: auto;
+  display: flex;
+}
+@media screen and (min-width: 400px) {
+  .header .home {
+    margin: auto auto auto 15px;
+    padding-top: 5px;
+  }
+}
+.header .home .logo {
   width: 40px;
   margin-top: auto;
   margin-bottom: auto;
 }
-.header .home {
-  margin: auto;
+@media screen and (min-width: 1850px) {
+  .header .home .logo {
+    height: 65px;
+    width: auto;
+    margin: 0;
+  }
 }
-.header h1 {
+.header .home h1 {
   display: inline-block;
   font-size: 1.6rem;
   font-family: "Montserrat", sans-serif;
   color: #20b7fa;
   font-weight: 600;
   margin: auto;
-  margin-top: 3px;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+@media screen and (min-width: 600px) {
+  .header .home h1 {
+    font-size: 2.3rem;
+  }
+}
+@media screen and (min-width: 1850px) {
+  .header .home h1 {
+    padding-left: 32px;
+  }
 }
 .header .nav {
   display: none;
+  position: absolute;
+  top: 85px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 99;
+  background-color: #fff;
+  text-align: center;
 }
-.header .menu {
+@media screen and (min-width: 900px) {
+  .header .nav {
+    position: relative;
+    display: block;
+    width: auto;
+    background: none;
+    top: 0;
+  }
+}
+.header .nav li {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  margin: 20px;
+}
+@media screen and (min-width: 900px) {
+  .header .nav li {
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 1850px) {
+  .header .nav li {
+    font-size: 2.4rem;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
+.header .nav .active {
+  font-weight: 700;
+}
+@media screen and (min-width: 1850px) {
+  .header .nav .active {
+    margin-right: 0;
+  }
+}
+.header .nav-visible {
+  display: block;
+}
+@media screen and (min-width: 900px) {
+  .header .hamburger {
+    display: none;
+  }
+}
+.header .hamburger .menu {
   margin-top: auto;
   margin-bottom: auto;
   width: 35px;
 }
 
-ul a li {
-  display: inline;
-  font-size: 2.4rem;
-  text-transform: uppercase;
-}
-
 .main {
-  width: 100vw;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 900px) {
+  .main {
+    flex-direction: row;
+    height: 75vh;
+  }
+}
+@media screen and (min-width: 900px) {
+  .main {
+    height: auto;
+  }
+}
+@media screen and (min-width: 1850px) {
+  .main {
+    height: 947px;
+  }
 }
 .main .image-container {
   width: 100%;
@@ -77,6 +171,22 @@ ul a li {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+@media screen and (min-width: 600px) {
+  .main .image-container {
+    background-position: center center;
+  }
+}
+@media screen and (min-width: 900px) {
+  .main .image-container {
+    width: 50%;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1850px) {
+  .main .image-container {
+    background-position-y: -110px;
+  }
 }
 .main .image-container:after {
   content: "";
@@ -93,12 +203,69 @@ ul a li {
   padding: 15px;
   font-family: "Open Sans", sans-serif;
 }
+@media screen and (min-width: 600px) {
+  .main .contact-form-container {
+    padding: 30px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .main .contact-form-container {
+    width: 50%;
+    padding: 40px;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .main .contact-form-container {
+    padding: 80px;
+  }
+}
+@media screen and (min-width: 1850px) {
+  .main .contact-form-container {
+    padding: 126px 140px 150px 140px;
+  }
+}
 .main .contact-form-container h2 {
   text-align: center;
   font-size: 2.8rem;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
   margin: 20px auto 15px;
+}
+@media screen and (min-width: 1850px) {
+  .main .contact-form-container h2 {
+    font-size: 5rem;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 700px) {
+  .main .contact-form-container .info-fields {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 700px) {
+  .main .contact-form-container .info-fields .field:nth-of-type(1) {
+    margin: 20px 15px 20px auto;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .main .contact-form-container .info-fields .field:nth-of-type(1) {
+    margin: 20px auto 20px 0;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .main .contact-form-container .info-fields .field:nth-of-type(2) {
+    margin: 20px auto 20px 15px;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .main .contact-form-container .info-fields .field:nth-of-type(2) {
+    margin: 20px 0 20px auto;
+    width: 40%;
+  }
 }
 .main .contact-form-container .field {
   display: flex;
@@ -113,29 +280,75 @@ ul a li {
 .main .contact-form-container .field input, .main .contact-form-container .field textarea {
   font-family: "Open Sans", sans-serif;
   font-size: 1.8rem;
-  border: 1px solid #000;
+  border: 1px solid rgba(112, 112, 112, 0.25);
   border-radius: 5px;
   padding: 8px;
 }
+@media screen and (min-width: 1850px) {
+  .main .contact-form-container .field input, .main .contact-form-container .field textarea {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (min-width: 1850px) {
+  .main .contact-form-container .field input, .main .contact-form-container .field textarea {
+    width: 398px;
+    height: 59px;
+  }
+}
+@media screen and (min-width: 1850px) {
+  .main .contact-form-container .field .contact-form-name {
+    width: 261px;
+  }
+}
 .main .contact-form-container .field textarea {
   height: 100px;
+}
+@media screen and (min-width: 900px) {
+  .main .contact-form-container .field textarea {
+    height: 200px;
+  }
+}
+@media screen and (min-width: 1850px) {
+  .main .contact-form-container .field textarea {
+    width: 674px;
+    height: 281px;
+    padding: 33px 32px 1px 29px;
+  }
 }
 .main .contact-form-container .submit-button {
   display: block;
   margin: 30px auto 20px;
   background-color: #20b7fa;
   width: 80%;
+  max-width: 300px;
   border-radius: 50px;
   color: #fff;
   font-weight: 700;
   font-size: 2rem;
   padding: 8px;
 }
+@media screen and (min-width: 1850px) {
+  .main .contact-form-container .submit-button {
+    margin: 71px auto 0 auto;
+    padding: 12.5px;
+    max-width: 398px;
+  }
+}
 
 .subscribe {
   background-image: linear-gradient(180deg, #20b7fa 0%, #20ebdd 100%);
   width: 100%;
   height: auto;
+}
+@media screen and (min-width: 900px) {
+  .subscribe {
+    padding: 100px;
+  }
+}
+@media screen and (min-width: 1850px) {
+  .subscribe {
+    padding: 221px 0 170px 0;
+  }
 }
 .subscribe form {
   padding: 10px;
@@ -150,20 +363,64 @@ ul a li {
   color: #fff;
   margin: 20px auto 15px;
 }
+@media screen and (min-width: 700px) {
+  .subscribe form h2 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .subscribe form h2 {
+    font-size: 3.2rem;
+  }
+}
+@media screen and (min-width: 1850px) {
+  .subscribe form h2 {
+    font-size: 5rem;
+    margin-bottom: 90px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .subscribe form .fields {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 700px) {
+  .subscribe form .fields .field:nth-of-type(1) {
+    margin: 20px 15px 20px auto;
+  }
+}
+@media screen and (min-width: 700px) {
+  .subscribe form .fields .field:nth-of-type(2) {
+    margin: 20px auto 20px 15px;
+  }
+}
 .subscribe form input, .subscribe form .main .contact-form-container .field textarea, .main .contact-form-container .field .subscribe form textarea {
   background: none;
   border-bottom: 1px solid #fff;
   font-family: "Open Sans", sans-serif;
   padding: 5px;
-  padding-left: 30px;
+  padding-left: 42px;
   font-size: 1.6rem;
   margin: 10px auto;
   display: block;
+  color: #fff;
+}
+@media screen and (min-width: 700px) {
+  .subscribe form input, .subscribe form .main .contact-form-container .field textarea, .main .contact-form-container .field .subscribe form textarea {
+    font-size: 1.9rem;
+  }
+}
+@media screen and (min-width: 1850px) {
+  .subscribe form input, .subscribe form .main .contact-form-container .field textarea, .main .contact-form-container .field .subscribe form textarea {
+    width: 399px;
+  }
 }
 .subscribe form .name-input, .subscribe form .email-input {
   background-image: url("../img/USER_ICO.svg");
   background-repeat: no-repeat;
   background-position: left;
+  background-position-x: 12px;
 }
 .subscribe form .email-input {
   background-image: url("../img/EMIAL_ICO.svg");
@@ -172,15 +429,33 @@ ul a li {
   font-family: "Open Sans", sans-serif;
   color: #fff;
 }
+@media screen and (min-width: 1850px) {
+  .subscribe form ::placeholder {
+    font-size: 2rem;
+  }
+}
 .subscribe form button {
   font-family: "Open Sans", sans-serif;
   background-color: #fff;
   border-radius: 50px;
   width: 50%;
+  max-width: 230px;
   color: #20b7fa;
   font-weight: 700;
   padding: 10px;
   margin: 30px auto 20px;
+}
+@media screen and (min-width: 700px) {
+  .subscribe form button {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 1850px) {
+  .subscribe form button {
+    margin-bottom: 0;
+    padding: 16px;
+    max-width: 300px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
