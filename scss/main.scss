@@ -25,7 +25,11 @@ body {
     .home {
         margin: auto;
         display: flex;
-        // margin-bottom: 10px;
+        transition: all 0.2s ease-in-out;
+        
+        &:hover {
+            transform: scale(1.1);
+        }
 
         @media screen and (min-width: 400px) {
             margin: auto auto auto 15px;
@@ -120,6 +124,31 @@ body {
             }
             
         }
+
+        .unactive {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .unactive:after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            right: 0;
+            width: 0;
+            bottom: -9px;
+            background: #000;
+            height: 2px;
+            transition-property: width;
+            transition-duration: 0.3s;
+            // transition-timing-function: ease-out;
+          }
+          
+          .unactive:hover:after {
+            left: 20px;
+            right: 20px;
+            width: 70%;
+          }
     }
 
     .nav-visible {
@@ -138,7 +167,6 @@ body {
         }
     }
 
-    
 }
 
 // _____________MAIN_____________
@@ -327,6 +355,11 @@ body {
             font-weight: 700;
             font-size: 2rem;
             padding: 8px;
+            transition: padding 0.2s ease-in-out;
+
+            &:hover {
+                padding: 18px;
+            }
 
             @media screen and (min-width: 1850px) {
                 margin: 71px auto 0 auto;
@@ -334,6 +367,8 @@ body {
                 max-width: 398px;
             }
         }
+
+       
 
     }
 
@@ -452,6 +487,11 @@ body {
             font-weight: 700;
             padding: 10px;
             margin: 30px auto 20px;
+            transition: padding 0.2s ease-in-out;
+
+            &:hover {
+                padding: 20px;
+            }
 
             @media screen and (min-width: 700px) {
                 font-size: 1.8rem; 
