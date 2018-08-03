@@ -31,7 +31,7 @@
 
         <!-- _________NAVIGATION_________ -->
         <button class="hamburger">
-            <img class="menu" src="img/hamburger.svg">
+            <img class="menu" src="img/hamburger.svg" alt="">
         </button>
         
         <nav class="nav">
@@ -58,21 +58,22 @@
 
                 <div class="info-fields">
                     <div class="field">
-                        <label>Email</label>
-                        <input type="email" name="email" placeholder="Podaj email">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" placeholder="Podaj email" id="email" aria-required="true">
                     </div>
 
                     <div class="field">
-                        <label>Imię</label>
-                        <input type="text" name="imię" placeholder="Podaj imię" class="contact-form-name">
+                        <label for="name">Imię</label>
+                        <input type="text" name="imię" placeholder="Podaj imię" class="contact-form-name" id="name" aria-required="true">
                     </div>
                 </div>    
 
                 <div class="field">
-                    <label>Wiadomość</label>
-                    <textarea name="Wiadomość" placeholder="Wpisz wiadomość"></textarea>
+                    <label for="message">Wiadomość</label>
+                    <textarea name="Wiadomość" placeholder="Wpisz wiadomość" id="message" aria-required="true"></textarea>
                 </div>
 
+                
                 <button type="submit" class="submit-button">Napisz do mnie</button>
 
             </form>
@@ -90,11 +91,13 @@
 
             <div class="fields">
                 <div class="field">
-                    <input class="name-input" type="text" name="Imię" placeholder="Imię">
+                    <label title="Imię" for="name-sub"></label>
+                    <input class="name-input" type="text" name="Imię" placeholder="Imię" id="name-sub" aria-required="false">
                 </div>
 
                 <div class="field">
-                    <input class="email-input" type="email" name="Email" placeholder="E-mail">
+                    <label title="Adres e-mail" for="email-sub"></label>
+                    <input class="email-input" type="email" name="Email" placeholder="E-mail" id="email-sub" aria-required="true">
                 </div>
             </div>
 

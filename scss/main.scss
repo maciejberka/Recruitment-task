@@ -3,7 +3,6 @@
 @import 'fontStyles';
 
 body {
-    background-color: red;
     max-width: 100vw;
 }
 
@@ -20,14 +19,12 @@ body {
     }
 
     // _____________LOGO_____________
-    
-
     .home {
         margin: auto;
         display: flex;
         transition: all 0.2s ease-in-out;
         
-        &:hover {
+        &:hover, &:focus {
             transform: scale(1.1);
         }
 
@@ -45,9 +42,8 @@ body {
                 height: 65px;
                 width: auto;
                 margin: 0;
-                
-                
             }
+
         }
 
         h1 {
@@ -66,13 +62,11 @@ body {
 
             @media screen and (min-width: 1850px) {
                 padding-left: 32px;
-                
-                
             }
-        }
-    }
 
-    
+        }
+
+    }
 
     // _____________NAVIGATION_____________
     .nav {
@@ -101,8 +95,6 @@ body {
             font-size: 2rem;
             margin: 20px;
 
-            
-
             @media screen and (min-width: 900px) {
                 display: inline-block;
             }
@@ -112,15 +104,34 @@ body {
                 margin-left: 25px;
                 margin-right: 25px;
             }
-        }
 
+        }
 
         .active {
             font-weight: 700;
 
             @media screen and (min-width: 1850px) {
-                
                 margin-right: 0;
+            }
+            
+        }
+
+        .active:after {
+
+            @media screen and (min-width: 900px) {    
+                content: '';
+                width: 100px;
+                position: absolute;
+                top: 55px;
+                left: 280px;
+                height: 2px;
+                background-color: $blue;
+            }
+
+            @media screen and (min-width: 1850px) {    
+                width: 130px;
+                top: 58px;
+                left: 335px;
             }
             
         }
@@ -131,24 +142,25 @@ body {
         }
 
         .unactive:after {
-            content: "";
+            content: '';
             position: absolute;
             z-index: -1;
             right: 0;
             width: 0;
-            bottom: -9px;
-            background: #000;
+            bottom: -16px;
+            background: $blue;
             height: 2px;
             transition-property: width;
             transition-duration: 0.3s;
-            // transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
           }
           
-          .unactive:hover:after {
+          .unactive:hover:after, .unactive:focus:after {
             left: 20px;
             right: 20px;
             width: 70%;
           }
+
     }
 
     .nav-visible {
@@ -156,6 +168,8 @@ body {
     }
 
     .hamburger {
+        transition: all 0.2s ease-in-out;
+
         @media screen and (min-width: 900px) {
             display: none;
         }
@@ -165,6 +179,10 @@ body {
             margin-bottom: auto;
             width: 35px;
         }
+    }
+
+    .hamburger-animation{
+        transform: rotate(90deg);
     }
 
 }
@@ -207,8 +225,9 @@ body {
         }
 
         @media screen and (min-width: 1850px) {
-            background-position-y: -110px;  
+            background-position-y: -90px;  
         }
+
     }
 
     .image-container:after {
@@ -242,7 +261,8 @@ body {
         }
 
         @media screen and (min-width: 1850px) {
-            padding: 126px 140px 150px 140px; 
+            padding: 126px 140px 150px 140px;
+            max-width: 968px; 
         }
 
         h2 {
@@ -255,11 +275,12 @@ body {
             @media screen and (min-width: 1850px) {
                 font-size: 5rem;
                 text-align: left;
-
             }
+
         }
 
         .info-fields {
+
             @media screen and (min-width: 700px) {
                 display: flex;
                 flex-direction: row;
@@ -319,12 +340,16 @@ body {
                     width: 398px;
                     height: 59px;
                 }
+
             }
 
             .contact-form-name {
+
                 @media screen and (min-width: 1850px) {
                     width: 261px;
+                    margin-left: 13px;
                 }
+
             }
 
             textarea {
@@ -342,6 +367,7 @@ body {
                 }
                 
             }
+
         }
 
         .submit-button {
@@ -356,8 +382,8 @@ body {
             font-size: 2rem;
             padding: 8px;
             transition: padding 0.2s ease-in-out;
-
-            &:hover {
+            
+            &:hover, &:focus {
                 padding: 18px;
             }
 
@@ -366,9 +392,8 @@ body {
                 padding: 12.5px;
                 max-width: 398px;
             }
-        }
 
-       
+        }
 
     }
 
@@ -414,6 +439,7 @@ body {
                 font-size: 5rem;
                 margin-bottom: 90px;
             } 
+
         }
 
         .fields {
@@ -454,6 +480,7 @@ body {
             @media screen and (min-width: 1850px) {
                 width: 399px;
             }
+
         }
 
         .name-input {
@@ -475,6 +502,7 @@ body {
             @media screen and (min-width: 1850px) {
                 font-size: 2rem;
             }
+
         }
 
         button {
@@ -489,7 +517,7 @@ body {
             margin: 30px auto 20px;
             transition: padding 0.2s ease-in-out;
 
-            &:hover {
+            &:hover, &:focus {
                 padding: 20px;
             }
 
@@ -502,7 +530,9 @@ body {
                 padding: 16px;
                 max-width: 300px;
             }
+
         }
 
     }
+
 }
